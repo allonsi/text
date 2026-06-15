@@ -1,0 +1,66 @@
+---
+title: 'Mathematical Statistics'
+subtitle: ''
+format: 
+  pdf:
+    toc: false
+    number-sections: true
+date: today
+header-includes:
+  \usepackage{float}
+  \floatplacement{figure}{H}
+  \usepackage{amsmath}
+  \usepackage{subcaption}
+  \usepackage[shortlabels]{enumitem}
+  \usepackage{mathtools}
+  \usepackage{amssymb}
+  \usepackage{tikz}
+  \usetikzlibrary{shapes, arrows.meta, positioning, backgrounds}
+---
+
+
+# Probability Space
+
+## Probability Space
+
+- Random Experiment ($\mathcal{E}$)
+  - An experiment (observe, do something) whose outcome is cannot be determined in advance.
+- $\omega$
+  - Possible outcome from the  random experiment. Elementary outcome.
+- Sample Space ($S$)
+  - The set of all possible outcomes from a random experiment.
+- Event
+  - A subset of the sample space.
+  - We will define the probability of an event, \textcolor{red}{not an elementary outcome}.
+    - We cannot define the probability of an elementary outcome when the sample space is continuous.
+
+**Remark** Why event not an elementary outcome? Due to mathematical considerations.
+
+- e.g. $S = [0,1]$. $\omega = 0.5$. $P(\omega) = 0$.
+
+## Three ways to assign probability (Historical approaches)
+
+### Classical (Uniform) model 
+
+$$
+P(A) = \frac{\text{Number of outcomes in } A}{\text{Total number of outcomes in } S}
+$$
+
+e.g. Coin tossing
+
+- $S = \{H, T\}$. $P(H) = P(T) = 0.5$.
+
+Not realistic if cardinality of sample space $|S| = \infty$ (problematic when elements are uncountable). 
+
+### Long-run relative frequency
+
+"Repeat" random experiment many times under the same conditions, and see the proportion of observing event $A$.
+
+$$
+P(A) = \lim_{n \to \infty} \frac{\text{Number of times } A \text{ occurs in } n \text{ trials}}{n}
+$$
+both the numerator and denominator go to infinity, but their ratio converges to a finite number.
+
+It provides practical interpretation of probability.
+
+e.g. 
